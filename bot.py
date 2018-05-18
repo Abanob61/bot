@@ -24,7 +24,7 @@ async def on_message(message):
     elif message.content.startswith('!sleep'):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
-    elif message.content.startswith('!sleep'):
+    elif message.content.startswith('!status'):
         embed = discord.Embed(title="Pes6stars bot", description="Nicest bot there is ever.", color=0xeee657)
     
         # give info about you here
