@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import socket
 
 client = discord.Client()
 
@@ -33,7 +34,25 @@ async def on_message(message):
         # give users a link to invite thsi bot to their server
         embed.add_field(name="Invite", value="[Invite link](<https://discordapp.com/invite/fF5KZsw>)")
 
-        await client.send_message(message.channel, embed=embed)      
+        await client.send(embed=embed)    
+    elif message.content.startswith('!server-status'):
+        embed = discord.Embed(title="Pes6stars bot", description="Status of PES6Stars server.", color=0xeee657)
+    
+        # give info about you here
+        embed.add_field(name="Author", value="Bob")
+
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        result = sock.connect_ex(('43.225.188.187',8190))
+        if result == 0:
+           embed.add_field(name="STATUS", value="ONLINE")
+           print "Port is open"
+        else:
+           embed.add_field(name="STATUS", value="OFFLINE")            
+           print "Port is not open"
+        # give users a link to invite thsi bot to their server
+        
+
+        await client.send(embed=embed)               
         
 
 client.run('NDQ2NzYyNTAyOTQ1MTEyMDc1.Dd9vrA.JJH1dpg-64cIdQby0uzfZryhpaU')
