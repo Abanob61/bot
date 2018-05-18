@@ -45,10 +45,10 @@ async def on_message(message):
         result = sock.connect_ex(('43.225.188.187',8190))
         if result == 0:
            embed.add_field(name="STATUS", value="ONLINE")
-           print "Port is open"
+           print ("Port is open")
         else:
            embed.add_field(name="STATUS", value="OFFLINE")            
-           print "Port is not open"
+           print ("Port is not open")
         # give users a link to invite thsi bot to their server
         
 
