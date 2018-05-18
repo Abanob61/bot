@@ -33,7 +33,7 @@ async def on_message(message):
         # give users a link to invite thsi bot to their server
         embed.add_field(name="Invite", value="[Invite link](<https://discordapp.com/invite/fF5KZsw>)")
 
-        await client.send(embed=embed)        
+        await client.send_message(message.channel, embed=embed)      
         
 
 client.run('NDQ2NzYyNTAyOTQ1MTEyMDc1.Dd9vrA.JJH1dpg-64cIdQby0uzfZryhpaU')
