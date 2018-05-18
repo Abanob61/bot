@@ -15,6 +15,7 @@ async def on_message(message):
     if message.content.startswith('!test'):
         counter = 0
         tmp = await client.send_message(message.channel, 'Calculating messages...')
+        await change_status(game='Pes6stars.cf', idle=False)
         async for log in client.logs_from(message.channel, limit=100):
             if log.author == message.author:
                 counter += 1
