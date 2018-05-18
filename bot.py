@@ -30,9 +30,6 @@ async def on_message(message):
         # give info about you here
         embed.add_field(name="Author", value="Bob")
 
-        # Shows the number of servers the bot is member of.
-        embed.add_field(name="Server count", value=f"{len(client.guilds)}")
-
         # give users a link to invite thsi bot to their server
         embed.add_field(name="Invite", value="[Invite link](<https://discordapp.com/invite/fF5KZsw>)")
 
