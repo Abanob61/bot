@@ -24,5 +24,19 @@ async def on_message(message):
     elif message.content.startswith('!sleep'):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
+    elif message.content.startswith('!sleep'):
+        embed = discord.Embed(title="Pes6stars bot", description="Nicest bot there is ever.", color=0xeee657)
+    
+        # give info about you here
+        embed.add_field(name="Author", value="Bob")
+
+        # Shows the number of servers the bot is member of.
+        embed.add_field(name="Server count", value=f"{len(bot.guilds)}")
+
+        # give users a link to invite thsi bot to their server
+        embed.add_field(name="Invite", value="[Invite link](<https://discordapp.com/invite/fF5KZsw>)")
+
+        await client.send(embed=embed)        
+        
 
 client.run('NDQ2NzYyNTAyOTQ1MTEyMDc1.Dd9vrA.JJH1dpg-64cIdQby0uzfZryhpaU')
