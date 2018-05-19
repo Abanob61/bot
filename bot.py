@@ -4,8 +4,6 @@ import socket
 
 client = discord.Client()
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.close()
-close = sock.close()
 
 @client.event
 async def on_ready():
