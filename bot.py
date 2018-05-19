@@ -45,6 +45,7 @@ async def on_message(message):
         # give info about you here
         embed.add_field(name="Author", value="Bob")
         close = sock.close()
+        sock.close()        
         if result == 0:
            embed.add_field(name="STATUS", value="ONLINE")
            print ("Port is open")
