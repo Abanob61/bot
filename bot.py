@@ -30,13 +30,13 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
     elif message.content.startswith('!status'):
-        embed = discord.Embed(title="Pes6stars bot", description="Nicest bot there is ever.", color=0xeee657)
+        embed = discord.Embed(title="Pes6stars bot", description="Pes6stars.cf", color=0xeee657)
     
         # give info about you here
         embed.add_field(name="Author", value="Bob")
 
         # give users a link to invite thsi bot to their server
-        embed.add_field(name="Invite", value="[Invite link](<https://discordapp.com/invite/fF5KZsw>)")
+        embed.add_field(name="Invite others", value="[Invite link](<https://discordapp.com/invite/fF5KZsw>)")
 
         await client.send_message(message.channel, embed=embed)     
     elif message.content.startswith('!server-status'):
@@ -52,7 +52,7 @@ async def on_message(message):
         else:
            embed.add_field(name="STATUS", value="OFFLINE")            
            print ("Port is not open")
-        embed.add_field(name="Lobbies List", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")          
+        embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")          
         await client.send_message(message.channel, embed=embed)
         
 
