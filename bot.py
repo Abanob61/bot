@@ -43,7 +43,8 @@ async def on_message(message):
 
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = sock.connect_ex(('43.225.188.187',8190))
-        socket.close()
+        close = sock.close()
+        socket.shutdown(SHUT_RDWR)
         if result == 0:
            embed.add_field(name="STATUS", value="ONLINE")
            print ("Port is open")
