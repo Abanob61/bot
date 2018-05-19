@@ -4,6 +4,10 @@ import socket
 
 client = discord.Client()
 
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+result = sock.connect_ex(('pes6stars.cf',8190))
+
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -40,9 +44,6 @@ async def on_message(message):
     
         # give info about you here
         embed.add_field(name="Author", value="Bob")
-
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        result = sock.connect_ex(('pes6stars.cf',8190))
         close = sock.close()
         shutdown = sock.shutdown(SHUT_RDWR)
         if result == 0:
