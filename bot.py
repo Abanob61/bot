@@ -49,9 +49,6 @@ async def on_message(message):
         else:
            embed.add_field(name="STATUS", value="OFFLINE")            
            print ("Port is not open")
-        # give users a link to invite thsi bot to their server
-        
-
         await client.send_message(message.channel, embed=embed)              
         
 
