@@ -40,20 +40,22 @@ async def on_message(message):
 
         await client.send_message(message.channel, embed=embed)     
     elif message.content.startswith('!server-status'):
-        embed = discord.Embed(title="Pes6stars bot", description="Status of PES6Stars server.", color=0xeee657)
-    
-        # give info about you here
-        embed.add_field(name="Author", value="Bob")
         close = sock.close()
-        sock.close()        
+        sock.close()      
         if result == 0:
+           embed = discord.Embed(title="Pes6stars bot", description="Status of PES6Stars server.", color=0x00ff00)
+           embed.add_field(name="Author", value="Bob")
            embed.add_field(name="STATUS", value="ONLINE")
-           print ("Port is open")
+           print ("Port is open")  
+           embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")  
+           await client.send_message(message.channel, embed=embed)
         else:
-           embed.add_field(name="STATUS", value="OFFLINE")            
-           print ("Port is not open")
-        embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")          
-        await client.send_message(message.channel, embed=embed)
+           embed = discord.Embed(title="Pes6stars bot", description="Status of PES6Stars server.", color=0xff0000)
+           embed.add_field(name="Author", value="Bob")
+           embed.add_field(name="STATUS", value="OFFLINE")
+           print ("Port is not open")  
+           embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")  
+           await client.send_message(message.channel, embed=embed)
         
 
 client.run('NDQ2NzYyNTAyOTQ1MTEyMDc1.Dd9vrA.JJH1dpg-64cIdQby0uzfZryhpaU')
