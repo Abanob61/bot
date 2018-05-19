@@ -43,13 +43,14 @@ async def on_message(message):
 
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = sock.connect_ex(('43.225.188.187',8190))
+        sock.close()
         if result == 0:
            embed.add_field(name="STATUS", value="ONLINE")
            print ("Port is open")
         else:
            embed.add_field(name="STATUS", value="OFFLINE")            
            print ("Port is not open")
-        await client.send_message(message.channel, embed=embed)              
+        await client.send_message(message.channel, embed=embed)
         
 
 client.run('NDQ2NzYyNTAyOTQ1MTEyMDc1.Dd9vrA.JJH1dpg-64cIdQby0uzfZryhpaU')
