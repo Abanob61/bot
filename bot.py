@@ -52,6 +52,7 @@ async def on_message(message):
         else:
            embed.add_field(name="STATUS", value="OFFLINE")            
            print ("Port is not open")
+        embed.add_field(name="Lobbies List", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")          
         await client.send_message(message.channel, embed=embed)
         
 
