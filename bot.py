@@ -44,7 +44,7 @@ async def on_message(message):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = sock.connect_ex(('pes6stars.cf',8190))
         close = sock.close()
-        shutdown = socket.shutdown(SHUT_RDWR)
+        shutdown = sock.shutdown(SHUT_RDWR)
         if result == 0:
            embed.add_field(name="STATUS", value="ONLINE")
            print ("Port is open")
