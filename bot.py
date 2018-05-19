@@ -14,7 +14,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence(game=discord.Game(name="Pes6Stars.cf"), status=discord.Status("online"))
+    await client.change_presence(game=discord.Game(name="Pes6Stars.cf | !server-status"), status=discord.Status("online"))
 
 @client.event
 async def on_message(message):
