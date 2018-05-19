@@ -3,7 +3,6 @@ import asyncio
 import socket
 
 client = discord.Client()
-sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 @client.event
 async def on_ready():
@@ -37,6 +36,7 @@ async def on_message(message):
 
         await client.send_message(message.channel, embed=embed)     
     elif message.content.startswith('!server-status'):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = sock.connect_ex(('pes6stars.cf',8190))        
         close = sock.close()
         sock.close()      
