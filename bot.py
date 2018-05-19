@@ -6,7 +6,7 @@ client = discord.Client()
 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-result = sock.connect_ex(('pes6stars.cf',8190))
+result = sock.connect_ex(('43.225.188.187',80))
 
 @client.event
 async def on_ready():
