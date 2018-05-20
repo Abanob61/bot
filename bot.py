@@ -37,7 +37,7 @@ async def on_message(message):
         await client.send_message(message.channel, embed=embed)     
     elif message.content.startswith('!server-status'):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        result = sock.connect_ex(('pes6stars.cf',8190))   
+        result = sock.connect_ex(('pes6stars.cf',20200))   
         sock.close()      
         if result == 0:
            embed = discord.Embed(title="Pes6stars bot", description="Status of PES6Stars server.", color=0x00ff00)
