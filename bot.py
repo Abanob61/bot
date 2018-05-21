@@ -74,7 +74,7 @@ async def on_message(message):
            print ("Port is not open")  
            embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")  
            await client.send_message(message.channel, embed=embed)   
-    elif message.content.startswith('!onlineplayers') or message.content.startswith('!online-players') or message.content.startswith('!users-players') or message.content.startswith('!usersplayers'):
+    elif message.content.startswith('!onlineplayers') or message.content.startswith('!online-players') or message.content.startswith('!online-users') or message.content.startswith('!usersonline'):
            url = requests.get("http://pes6stars.cf/onlineplayers.html")
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Online players at Pes6stars server now.", color=0x00ff00)
