@@ -41,7 +41,7 @@ async def on_message(message):
         result = sock.connect_ex(('pes6stars.cf',20200))   
         sock.close()      
         if result == 0:
-           url = requests.get("http://pes6stars.cf/onlineplayers.html")
+           url = requests.get("http://pes6stars.cf/onlineplayers.php")
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Status of Pes6Stars server.", color=0x00ff00)
            embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")
@@ -75,7 +75,7 @@ async def on_message(message):
            embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")  
            await client.send_message(message.channel, embed=embed)   
     elif message.content.startswith('!onlineplayers') or message.content.startswith('!online-players') or message.content.startswith('!online-users') or message.content.startswith('!usersonline') or message.content.startswith('!onlineusers'):
-           url = requests.get("http://pes6stars.cf/onlineplayers.html")
+           url = requests.get("http://pes6stars.cf/onlineplayers.php")
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Online players at Pes6stars server now.", color=0x00ff00)
            embed.add_field(name="Online Players", value=htmltext)
