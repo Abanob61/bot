@@ -44,11 +44,10 @@ async def on_message(message):
            url = requests.get("http://pes6stars.cf/onlineplayers.html")
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Status of Pes6Stars server.", color=0x00ff00)
-           embed.add_field(name="Author", value="Bob")
+           embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")
            embed.add_field(name="STATUS", value="ONLINE")
            embed.add_field(name="Online Players", value=htmltext)
            print ("Port is open")  
-           embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")  
            await client.send_message(message.channel, embed=embed)
         else:
            embed = discord.Embed(title="Pes6Stars Bot", description="Status of Pes6Stars server.", color=0xff0000)
@@ -75,11 +74,10 @@ async def on_message(message):
            print ("Port is not open")  
            embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")  
            await client.send_message(message.channel, embed=embed)   
-    elif message.content.startswith('!onlineplayers') or message.content.startswith('!online-players'):
+    elif message.content.startswith('!onlineplayers') or message.content.startswith('!online-players') or message.content.startswith('!users-players') or message.content.startswith('!usersplayers'):
            url = requests.get("http://pes6stars.cf/onlineplayers.html")
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Online players at Pes6stars server now.", color=0x00ff00)
-           embed.add_field(name="Author", value="Bob")
            embed.add_field(name="Online Players", value=htmltext)
            await client.send_message(message.channel, embed=embed)         
 
