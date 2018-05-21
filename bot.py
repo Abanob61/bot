@@ -46,7 +46,7 @@ async def on_message(message):
            embed = discord.Embed(title="Pes6Stars Bot", description="Status of Pes6Stars server.", color=0x00ff00)
            embed.add_field(name="Author", value="Bob")
            embed.add_field(name="STATUS", value="ONLINE")
-           embed.add_field(name="Online PLayers", value="htmltext")
+           embed.add_field(name="Online PLayers", value=htmltext)
            print ("Port is open")  
            embed.add_field(name="Lobbies Live!", value="[Lobbies List](<https://pes6stars.cf/lobbies.php>)")  
            await client.send_message(message.channel, embed=embed)
