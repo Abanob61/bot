@@ -81,8 +81,8 @@ async def on_message(message):
            embed.add_field(name="Online Players", value=htmltext)
            await client.send_message(message.channel, embed=embed)  
     elif message.content.strip().startswith('!rank'):
-           message = message.content.strip() 
-           profilename = message[len(message) + 6:].content.strip()
+           message = message.content.strip()
+           profilename = message[len(message) + 6:].strip()
            url = requests.get("https://pes6stars.cf/adminususus/stats.php?p=Ahg377rx39x1&profile=.$profilename.")
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Online players at Pes6stars server now.", color=0x00ff00)
