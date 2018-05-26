@@ -84,7 +84,7 @@ async def on_message(message):
 		   message = message.content()
 		   profilename2 = re.split('\s+', message)[0][5:]
 		   profilename = message[len(profilename2) + 6:].strip()
-           url = requests.get("https://pes6stars.cf/adminususus/stats.php?p=Ahg377rx39x1&profile=.'$profilename'.")
+           url = requests.get("https://pes6stars.cf/adminususus/stats.php?p=Ahg377rx39x1&profile=$profilename")
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Online players at Pes6stars server now.", color=0x00ff00)
            embed.add_field(name="Online Players", value=htmltext)
