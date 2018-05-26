@@ -82,7 +82,6 @@ async def on_message(message):
            await client.send_message(message.channel, embed=embed)  
     elif message.content.strip().startswith('!rank'):
            message = message.content.strip()
-           profilename2 = re.split('\s+', message)[0][5:]
            profilename = message[len(message) + 6:].content.strip()
            url = requests.get("https://pes6stars.cf/adminususus/stats.php?p=Ahg377rx39x1&profile=.$profilename.")
            htmltext = url.text
