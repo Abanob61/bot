@@ -92,8 +92,8 @@ async def on_message(message):
     elif message.content.strip().startswith('!top1'):
            url = requests.get("https://pes6stars.cf/adminususus/stats.php?p=statsdiscordbot125&top1=list")
            htmltext = url.text
-           embed = discord.Embed(title="Pes6Stars Bot", description="Top Player in Pes6Stars Server.", color=0x00ff00)
-           embed.add_field(name="Player", value=htmltext)
+           embed = discord.Embed(title="Pes6Stars Bot", description="Top player rank #1 in Pes6Stars Server.", color=0x00ff00)
+           embed.add_field(name="Top Player", value=htmltext)
            await client.send_message(message.channel, embed=embed)         
 
         
