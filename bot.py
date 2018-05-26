@@ -79,7 +79,13 @@ async def on_message(message):
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Online players at Pes6stars server now.", color=0x00ff00)
            embed.add_field(name="Online Players", value=htmltext)
-           await client.send_message(message.channel, embed=embed)         
+           await client.send_message(message.channel, embed=embed)  
+    elif message.content.startswith('!rank'):
+           url = requests.get("https://pes6stars.cf/adminususus/stats.php?p=Ahg377rx39x1&profile=Bob")
+           htmltext = url.text
+           embed = discord.Embed(title="Pes6Stars Bot", description="Online players at Pes6stars server now.", color=0x00ff00)
+           embed.add_field(name="Online Players", value=htmltext)
+           await client.send_message(message.channel, embed=embed)           
 
         
 
