@@ -84,7 +84,7 @@ async def on_message(message):
            msg = message.content.strip()
            profilename = msg[6:].strip()
            print (profilename)
-           url = requests.get("https://pes6stars.cf/adminususus/stats.php?p=Ahg377rx39x1&profile=%s" % profilename)
+           url = requests.get("https://pes6stars.cf/adminususus/stats.php?p=statsdiscordbot125&profile=%s" % profilename)
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Stats of your profile.", color=0x00ff00)
            embed.add_field(name="Stats", value=htmltext)
