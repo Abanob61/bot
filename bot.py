@@ -33,7 +33,7 @@ async def on_message(message):
         embed.add_field(name="Author", value="Bob")
 
         # give users a link to invite thsi bot to their server
-        embed.add_field(name="Invite others", value="[Invite link](<https://discordapp.com/invite/fF5KZsw>)")
+        embed.add_field(name="Invite others!", value="[Invite link](<https://discordapp.com/invite/fF5KZsw>)")
 
         await client.send_message(message.channel, embed=embed)     
     elif message.content.startswith('!server-status'):
