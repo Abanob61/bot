@@ -34,8 +34,8 @@ async def on_message(message):
            htmltext = url.text
            print (htmltext)
            if htmltext == "1":       
-               embed = discord.Embed(title="Pes6Stars Bot", description="Stats of your profile.", color=0x00ff00)
-               embed.add_field(name="Stats", value=htmltext)
+               await client.change_nickname(message.author, profilename)
+               await client.send_message(message.author, "```"+"You are now verified "+profilename+"```")
                await client.send_message(message.channel, embed=embed)  
            else:
                 await asyncio.sleep(5)
