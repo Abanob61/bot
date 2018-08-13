@@ -34,7 +34,7 @@ async def on_message(message):
            htmltext = url.text
            print (htmltext)
            if htmltext == "1":       
-               await client.change_nickname(message.author, profilename)
+               await client.change_nickname(439790554734133261, message.author, profilename)
                await client.send_message(message.author, "```"+"You are now verified "+profilename+"```")
                await client.send_message(message.channel, embed=embed)  
            else:
