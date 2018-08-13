@@ -41,7 +41,7 @@ async def on_message(message):
                await client.remove_roles(message.author, nonverifiedrole)
                await client.send_message(message.author, "```"+"You are now verified "+profilename+"```")
                await client.send_message(440854555010400266, ""+profilename+" has been verified.")
-               await client.delete_message(message)  
+               await client.delete_message(message)
            else:
                 await asyncio.sleep(5)
                 await client.send_message(message.channel, 'Their is a problem on your verification, try @verifyme again at game.')                
