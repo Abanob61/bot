@@ -27,7 +27,6 @@ async def on_message(message):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
     elif message.content.startswith('!verifyhelp') or message.content.startswith('!verify-help') or message.content.startswith('!getverified'):
-        await asyncio.sleep(5)
         await client.send_message(message.channel, "```First: You need to open the PES6 game and type at the chat at any place at game @verifyme```")  
         await client.send_message(message.channel, "```Second: Go to #verificaiton channel and type !verify [profile name], The profile name which you are logged with it and type with it @verifyme command!```")       
     elif message.content.startswith('!verify'):
@@ -47,7 +46,7 @@ async def on_message(message):
                await client.send_message(client.get_channel('440854555010400266'), ""+profilename+" has been verified.")
                await client.delete_message(message)
            else:
-                await asyncio.sleep(3)
+                await asyncio.sleep(2)
                 await client.delete_message(message)
                 await client.send_message(message.channel, "```Their is a problem on your verification, Type @verifyme command again at PES6 game.```")                
     elif message.content.startswith('!status'):
