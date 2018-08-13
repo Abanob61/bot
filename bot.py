@@ -35,6 +35,8 @@ async def on_message(message):
            print (htmltext)
            if htmltext == "1":       
                await client.change_nickname(message.author, profilename)
+               await self.bot.add_roles(user, discord.utils.get(ctx.message.server.roles, name='Verified Player'))
+               await self.bot.remove_roles(user, discord.utils.get(ctx.message.server.roles, name='Non-Verified Player'))
                await client.send_message(message.author, "```"+"You are now verified "+profilename+"```")
                await client.delete_message(message)  
            else:
