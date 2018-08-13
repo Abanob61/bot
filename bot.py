@@ -39,7 +39,7 @@ async def on_message(message):
                nonverifiedrole = discord.utils.get(message.server.roles, name="Non-Verified Player")
                await client.add_roles(message.author, verifiedrole)
                await client.remove_roles(message.author, nonverifiedrole)
-               await client.send_message(message.author, "```"+"You are now verified "+profilename+"```")440854555010400266
+               await client.send_message(message.author, "```"+"You are now verified "+profilename+"```")
                await client.send_message(440854555010400266, ""+profilename+" has been verified.")
                await client.delete_message(message)  
            else:
