@@ -47,7 +47,8 @@ async def on_message(message):
                await client.send_message(client.get_channel('440854555010400266'), ""+profilename+" has been verified.")
                await client.delete_message(message)
            else:
-                await asyncio.sleep(5)
+                await asyncio.sleep(3)
+                await client.delete_message(message)
                 await client.send_message(message.channel, 'Their is a problem on your verification, try @verifyme again at game.')                
     elif message.content.startswith('!status'):
         embed = discord.Embed(title="Pes6stars bot", description="Pes6stars.cf", color=0xeee657)
