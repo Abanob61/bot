@@ -49,7 +49,7 @@ async def on_message(message):
            else:
                 await asyncio.sleep(3)
                 await client.delete_message(message)
-                await client.send_message(message.channel, 'Their is a problem on your verification, try @verifyme again at game.')                
+                await client.send_message(message.channel, "```Their is a problem on your verification, try @verifyme again at PES6 game.```")                
     elif message.content.startswith('!status'):
         embed = discord.Embed(title="Pes6stars bot", description="Pes6stars.cf", color=0xeee657)
     
