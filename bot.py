@@ -40,7 +40,7 @@ async def on_message(message):
                await client.add_roles(message.author, verifiedrole)
                await client.remove_roles(message.author, nonverifiedrole)
                await client.send_message(message.author, "```"+"You are now verified "+profilename+"```")
-               await client.send_message(440854555010400266, ""+profilename+" has been verified.")
+               await client.send_message(client.get_channel('440854555010400266'), ""+profilename+" has been verified.")
                await client.delete_message(message)
            else:
                 await asyncio.sleep(5)
