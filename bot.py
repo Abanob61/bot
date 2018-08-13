@@ -34,12 +34,12 @@ async def on_message(message):
            htmltext = url.text
            print (htmltext)
            if htmltext == "1":       
-               await client.change_nickname(439790554734133261, message.author, profilename)
+               await client.change_nickname(message.author, profilename)
                await client.send_message(message.author, "```"+"You are now verified "+profilename+"```")
-               await client.send_message(message.channel, embed=embed)  
+               await client.delete_message(message)  
            else:
                 await asyncio.sleep(5)
-                await client.send_message(message.channel, 'Done sleeping')                
+                await client.send_message(message.channel, 'Their is a problem on your verification, try @verify again at game.')                
     elif message.content.startswith('!status'):
         embed = discord.Embed(title="Pes6stars bot", description="Pes6stars.cf", color=0xeee657)
     
