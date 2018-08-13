@@ -33,9 +33,13 @@ async def on_message(message):
            url = requests.get("https://pes6stars.cf/adminususus/verify.php?p=statsdiscordbot125&profile=%s" % profilename)
            htmltext = url.text
            print (htmltext)
-           embed = discord.Embed(title="Pes6Stars Bot", description="Stats of your profile.", color=0x00ff00)
-           embed.add_field(name="Stats", value=htmltext)
-           await client.send_message(message.channel, embed=embed)       
+           if htmltext = '1':       
+               embed = discord.Embed(title="Pes6Stars Bot", description="Stats of your profile.", color=0x00ff00)
+               embed.add_field(name="Stats", value=htmltext)
+               await client.send_message(message.channel, embed=embed)  
+           else:
+                await asyncio.sleep(5)
+                await client.send_message(message.channel, 'Done sleeping')                
     elif message.content.startswith('!status'):
         embed = discord.Embed(title="Pes6stars bot", description="Pes6stars.cf", color=0xeee657)
     
