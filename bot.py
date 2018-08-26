@@ -61,7 +61,7 @@ async def on_message(message):
         await client.send_message(message.channel, embed=embed)     
     elif message.content.startswith('!server-status'):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        result = sock.connect_ex(('pes6stars.cf',50630))   
+        result = sock.connect_ex(('pes6stars.cf',20200))   
         sock.close()      
         if result == 0:
            url = requests.get("http://pes6stars.cf/onlineplayers.php")
