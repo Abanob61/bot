@@ -34,7 +34,7 @@ async def on_message(message):
            profilename = msg[7:].strip()
            print (profilename)
            url = requests.get("https://pes6stars.cf/adminususus/verify.php?p=statsdiscordbot125&profile=%s" % profilename)
-           htmltext = url.content
+           htmltext = url.text
            print (htmltext)
            if htmltext == "1":       
                await client.change_nickname(message.author, profilename)
