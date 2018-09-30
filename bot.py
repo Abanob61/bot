@@ -37,7 +37,7 @@ async def on_message(message):
            msg = message.content.strip()
            profilename = msg[7:].strip()
            print (profilename)
-           url = requests.get("https://pes6stars.cf/adminususus/verify.php?p=statsdiscordbot125&profile=%s" % profilename)
+           url = requests.get("http://pes6stars.cf/adminususus/verify.php?p=statsdiscordbot125&profile=%s" % profilename)
            htmltext = url.text
            print (htmltext)
            if htmltext == "1":       
@@ -113,13 +113,13 @@ async def on_message(message):
            msg = message.content.strip()
            profilename = msg[6:].strip()
            print (profilename)
-           url = requests.get("https://pes6stars.cf/adminususus/stats.php?p=statsdiscordbot125&profile=%s" % profilename)
+           url = requests.get("http://pes6stars.cf/adminususus/stats.php?p=statsdiscordbot125&profile=%s" % profilename)
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Stats of your profile.", color=0x00ff00)
            embed.add_field(name="Stats", value=htmltext)
            await client.send_message(message.channel, embed=embed)           
     elif message.content.strip().startswith('!top1'):
-           url = requests.get("https://pes6stars.cf/adminususus/stats.php?p=statsdiscordbot125&top1=list")
+           url = requests.get("http://pes6stars.cf/adminususus/stats.php?p=statsdiscordbot125&top1=list")
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Top player rank #1 in Pes6Stars Server.", color=0x00ff00)
            embed.add_field(name="Top Player", value=htmltext)
