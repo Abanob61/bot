@@ -33,7 +33,7 @@ async def on_message(message):
     elif message.content.startswith('!verifyhelp') or message.content.startswith('!verify-help') or message.content.startswith('!getverified'):
         await client.send_message(message.channel, "```First: You need to open the PES6 game and type at the chat at any place at game @verifyme```")  
         await client.send_message(message.channel, "```Second: Go to #verificaton channel and type !verify [profile name], The profile name which you are logged with it and type with it @verifyme command!```")       
-    elif message.content.startswith('!verify'):
+    elif message.content.startswith('!verify') or message.content.startswith('!Verify'):
            msg = message.content.strip()
            profilename = msg[7:].strip()
            print (profilename)
