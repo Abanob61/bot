@@ -33,7 +33,7 @@ async def on_message(message):
     elif message.content.startswith('!verifyhelp') or message.content.startswith('!verify-help') or message.content.startswith('!getverified'):
         await client.send_message(message.channel, "```First: You need to open the PES6 game and type at the chat at any place at game @verifyme```")  
         await client.send_message(message.channel, "```Second: Go to #verificaton channel and type !verify [profile name], The profile name which you are logged with it and type with it @verifyme command!```")       
-    elif message.content.startswith('!verify') or message.content.startswith('!Verify'):
+    elif message.content.startswith('!verify') or message.content.startswith('!Verify') or message.content.startswith('!VERIFY'):
            msg = message.content.strip()
            profilename = msg[7:].strip()
            print (profilename)
@@ -55,7 +55,7 @@ async def on_message(message):
                 await asyncio.sleep(2)
                 await client.delete_message(message)
                 await client.send_message(message.channel, "```Their is a problem on your verification, Type @verifyme command again at PES6 game firstly.```")                
-    elif message.content.startswith('!status'):
+    elif message.content.startswith('!status') or message.content.startswith('!STATUS') or message.content.startswith('!Status'):
         embed = discord.Embed(title="Pes6stars bot", description="Pes6stars.cf", color=0xeee657)
     
         # give info about you here
@@ -65,7 +65,7 @@ async def on_message(message):
         embed.add_field(name="Invite others!", value="[Invite link](<https://discordapp.com/invite/fF5KZsw>)")
 
         await client.send_message(message.channel, embed=embed)     
-    elif message.content.startswith('!server-status'):
+    elif message.content.startswith('!server-status') or message.content.startswith('!SERVER-STATUS') or message.content.startswith('!Server-Status'):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         result = sock.connect_ex(('pes6stars.cf',20200))   
         sock.close()      
@@ -109,7 +109,7 @@ async def on_message(message):
            embed = discord.Embed(title="Pes6Stars Bot", description="Online players at Pes6stars server now.", color=0x00ff00)
            embed.add_field(name="Online Players", value=htmltext)
            await client.send_message(message.channel, embed=embed)  
-    elif message.content.strip().startswith('!stats'):
+    elif message.content.strip().startswith('!stats') or message.content.startswith('!STATS') or message.content.startswith('!Stats'):
            msg = message.content.strip()
            profilename = msg[6:].strip()
            print (profilename)
@@ -118,7 +118,7 @@ async def on_message(message):
            embed = discord.Embed(title="Pes6Stars Bot", description="Stats of your profile.", color=0x00ff00)
            embed.add_field(name="Stats", value=htmltext)
            await client.send_message(message.channel, embed=embed)           
-    elif message.content.strip().startswith('!top1'):
+    elif message.content.strip().startswith('!top1') or message.content.startswith('!TOP1') or message.content.startswith('!Top1'):
            url = requests.get("http://pes6stars.cf/adminususus/stats.php?p=statsdiscordbot125&top1=list")
            htmltext = url.text
            embed = discord.Embed(title="Pes6Stars Bot", description="Top player rank #1 in Pes6Stars Server.", color=0x00ff00)
